@@ -18,8 +18,13 @@ var ws = new ClientWebSocket();
 
 //await ws.ConnectAsync(new Uri("ws://localhost:6969/ws"),
 //  CancellationToken.None);
+//http://192.168.1.5:22679/http://192.168.1.5:22679/
 
-await ws.ConnectAsync(new Uri($"ws://localhost:6969/ws?name={name}"),
+//await ws.ConnectAsync(new Uri($"ws://192.168.1.5/ws?name={name}"),
+  //CancellationToken.None);
+
+
+await ws.ConnectAsync(new Uri($"wss://localhost/ws?name={name}"),
   CancellationToken.None);
 
 Console.WriteLine("Conectado al servidor!");
